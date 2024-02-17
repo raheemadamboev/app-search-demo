@@ -1,0 +1,35 @@
+[versions]
+
+compose = "2024.02.00"
+compose-activity = "1.8.2"
+compose-lifecycle = "2.7.0"
+core = "1.12.0"
+appsearch = "1.1.0-alpha03"
+
+android = "8.2.2"
+kotlin = "1.9.22"
+
+sdk-min = "26"
+sdk-compile = "34"
+sdk-target = "34"
+compose-compiler = "1.5.8"
+java-target = "17"
+
+[libraries]
+
+compose = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
+compose-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
+core = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+appsearch = { group = "androidx.appsearch", name = "appsearch", version.ref = "appsearch" }
+appsearch-local = { group = "androidx.appsearch", name = "appsearch-local-storage", version.ref = "appsearch" }
+appsearch-compiler = { group = "androidx.appsearch", name = "appsearch-compiler", version.ref = "appsearch" }
+
+[plugins]
+
+android = { id = "com.android.application", version.ref = "android" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
