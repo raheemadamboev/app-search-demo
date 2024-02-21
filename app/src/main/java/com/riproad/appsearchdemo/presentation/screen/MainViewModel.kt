@@ -79,4 +79,11 @@ class MainViewModel @Inject constructor(
             getTodos(query.value)
         }
     }
+
+    fun onMarkTodo(todo: TodoModel) {
+        viewModelScope.launch {
+            repository.insertTodo(todo.copy(done = !todo.done))
+            getTodos(query.value)
+        }
+    }
 }

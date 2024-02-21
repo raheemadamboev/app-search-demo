@@ -1,6 +1,7 @@
 package com.riproad.appsearchdemo.presentation.screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Done
 import androidx.compose.material3.Card
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -18,6 +20,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -72,24 +75,38 @@ fun MainScreen(
                     key = { it.id }
                 ) { todo ->
                     Card(
+                        onClick = {
+                            viewmodel.onMarkTodo(todo)
+                        },
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(10.dp)
                     ) {
-                        Column(
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(16.dp)
                         ) {
-                            Text(
-                                text = todo.title
-                            )
-                            Spacer(
-                                modifier = Modifier.height(6.dp)
-                            )
-                            Text(
-                                text = todo.text
-                            )
+                            Column(
+                                modifier = Modifier.weight(1F)
+                            ) {
+                                Text(
+                                    text = todo.title
+                                )
+                                Spacer(
+                                    modifier = Modifier.height(6.dp)
+                                )
+                                Text(
+                                    text = todo.text
+                                )
+                            }
+                            if (todo.done) {
+                                Icon(
+                                    imageVector = Icons.Filled.Done,
+                                    contentDescription = null
+                                )
+                            }
                         }
                     }
                 }
