@@ -3,11 +3,16 @@
 compose = "2024.02.00"
 compose-activity = "1.8.2"
 compose-lifecycle = "2.7.0"
+compose-viewmodel = "2.7.0"
+compose-hilt = "1.1.0"
 core = "1.12.0"
+hilt = "2.50"
+coroutines = "1.7.3"
 appsearch = "1.1.0-alpha03"
 
 android = "8.2.2"
 kotlin = "1.9.22"
+ksp = "1.9.22-1.0.17"
 
 sdk-min = "26"
 sdk-compile = "34"
@@ -24,7 +29,13 @@ compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
 compose-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
+compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-viewmodel" }
+compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "compose-hilt" }
 core = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+dagger-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 appsearch = { group = "androidx.appsearch", name = "appsearch", version.ref = "appsearch" }
 appsearch-local = { group = "androidx.appsearch", name = "appsearch-local-storage", version.ref = "appsearch" }
 appsearch-compiler = { group = "androidx.appsearch", name = "appsearch-compiler", version.ref = "appsearch" }
@@ -33,3 +44,5 @@ appsearch-compiler = { group = "androidx.appsearch", name = "appsearch-compiler"
 
 android = { id = "com.android.application", version.ref = "android" }
 kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
