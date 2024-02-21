@@ -1,4 +1,4 @@
-package com.riproad.appsearchdemo.ui.theme
+package com.riproad.appsearchdemo.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
