@@ -6,6 +6,7 @@ compose-lifecycle = "2.7.0"
 compose-viewmodel = "2.7.0"
 compose-hilt = "1.1.0"
 core = "1.12.0"
+collections = "0.3.7"
 hilt = "2.50"
 coroutines = "1.7.3"
 appsearch = "1.1.0-alpha03"
@@ -32,6 +33,7 @@ compose-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-co
 compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "compose-viewmodel" }
 compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "compose-hilt" }
 core = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "collections" }
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 dagger-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
 coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }

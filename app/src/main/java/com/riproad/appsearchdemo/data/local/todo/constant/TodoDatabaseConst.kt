@@ -15,5 +15,5 @@ object TodoDatabaseConst {
     /**
      * Count of items in a page.
      */
-    const val PAGE_COUNT = 10
+    const val PAGE_COUNT = 50
 }

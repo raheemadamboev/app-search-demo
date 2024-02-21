@@ -37,6 +37,9 @@ android {
 
     kotlinOptions {
         jvmTarget = libs.versions.java.target.get()
+        freeCompilerArgs += listOf(
+            "-opt-in=kotlinx.coroutines.FlowPreview"
+        )
     }
 
     buildFeatures {
@@ -77,6 +80,9 @@ dependencies {
 
     // core
     implementation(libs.core)
+
+    // collections
+    implementation(libs.collections)
 
     // hilt
     implementation(libs.hilt)

@@ -55,7 +55,7 @@ class TodoDatabase {
     suspend fun getTodos(query: String): List<TodoEntity> {
         return withContext(Dispatchers.IO) {
             val spec = SearchSpec.Builder()
-                .setSnippetCount(TodoDatabaseConst.PAGE_COUNT)
+                .setResultCountPerPage(TodoDatabaseConst.PAGE_COUNT)
                 .addFilterNamespaces(TodoDatabaseConst.NAMESPACE)
                 .setRankingStrategy(SearchSpec.RANKING_STRATEGY_USAGE_COUNT)
                 .build()
