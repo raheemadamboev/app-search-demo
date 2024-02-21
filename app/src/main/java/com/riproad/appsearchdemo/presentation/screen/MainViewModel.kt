@@ -44,7 +44,7 @@ class MainViewModel @Inject constructor(
 
     private fun observeQuery() {
         viewModelScope.launch {
-            query.debounce(1.seconds).collectLatest { query ->
+            query.debounce(0.5.seconds).collectLatest { query ->
                 getTodos(query)
             }
         }
