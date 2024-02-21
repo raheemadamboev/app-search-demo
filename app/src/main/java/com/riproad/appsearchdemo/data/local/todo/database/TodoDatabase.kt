@@ -57,7 +57,7 @@ class TodoDatabase {
             val spec = SearchSpec.Builder()
                 .setResultCountPerPage(TodoDatabaseConst.PAGE_COUNT)
                 .addFilterNamespaces(TodoDatabaseConst.NAMESPACE)
-                .setRankingStrategy(SearchSpec.RANKING_STRATEGY_USAGE_COUNT)
+                .setRankingStrategy(SearchSpec.RANKING_STRATEGY_CREATION_TIMESTAMP)
                 .build()
             val result = session?.search(query, spec) ?: return@withContext emptyList()
             return@withContext result.nextPageAsync.get().mapNotNull { search ->
